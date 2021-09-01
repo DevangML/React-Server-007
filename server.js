@@ -13,7 +13,7 @@ const app = express();
 // CORS
 
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://react-website-kswbzucqj-devangml.vercel.app/",
 };
 app.use(cors(corsOptions));
 
@@ -40,14 +40,6 @@ app.post("/contact", (req, res) => {
   })
   
 });
-
-// Modules
-
-app.use(express.static(path.join(__dirname, './client/build')))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build'))
-})
-
 
 // Making Port and connection for express.js
 
